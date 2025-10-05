@@ -63,6 +63,142 @@ IRverse/
  │   ├─ prototype.jpg
  │   └─ pcb.png
  └─ README.md           # Ce fichier
+
+## **Code :**
+
+'''esphome:
+  name: esp8266-roblin-ir
+  friendly_name: ESP8266-Roblin_IR
+
+esp8266:
+  board: d1_mini_pro
+
+logger:
+
+api:
+  encryption:
+    key: "takeyapi"
+
+ota:
+  platform: esphome
+  password: "0a1abb4344477f1f0dd6a6e9c7143608"
+
+wifi:
+  ssid: "tonwifi"
+  password: "tonmotdepasse"
+  ap:
+    ssid: "Esp8266-Roblin-Ir"
+    password: "cvi91SvuVJfn"
+
+captive_portal:
+
+remote_transmitter:
+  id: my_remote
+  pin: D5
+  carrier_duty_percent: 50%
+
+# --- Scripts pour appuis longs ---
+script:
+  - id: lumiere_min
+    then:
+      - delay: 3s
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 000B 0000 0021 001A 001E 001A 001E 0019 003C 0034 001E 001A 001F 0019 001F 0019 001F 0019 001E 001B 001E 001A 001D 0181"
+
+  - id: mode_24h_on
+    then:
+      - delay: 3s
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0009 0000 003E 0035 001E 0019 003B 0019 001E 0034 001F 001A 001E 001A 003B 0034 001F 001A 001E 0181"
+
+  - id: mode_24h_off
+    then:
+      - delay: 3s
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0009 0000 003D 0034 001F 0019 003C 0019 001F 0034 001F 0019 001E 001A 003C 0035 001E 0019 001F 0181"
+
+# --- Tous les boutons ---
+button:
+  # Lumière
+  - platform: template
+    name: "Lumière ON (max)"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0009 0000 0021 0018 001F 0018 003C 0034 001E 001A 001E 001A 003B 006A 001E 001A 001E 001A 0057 0181"
+
+  - platform: template
+    name: "Lumière ON (min) - appui long"
+    on_press:
+      - script.execute: lumiere_min
+
+  - platform: template
+    name: "Lumière OFF"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0009 0000 0021 0018 001F 0018 003C 0034 001E 001A 001E 001A 003A 006A 001E 001A 001E 001A 0057 0181"
+
+  # Hotte
+  - platform: template
+    name: "Hotte ON"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0009 0000 0021 0018 001F 0033 003C 001A 001E 001A 001E 0035 003B 004F 001E 0034 001E 001A 003B 0181"
+
+  - platform: template
+    name: "Hotte OFF"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0009 0000 0021 0019 001F 0034 003C 0019 001F 0019 001F 0034 003B 004E 001F 0033 001F 001A 003B 0181"
+
+  # Aspiration
+  - platform: template
+    name: "Aspiration +1"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0008 0000 0021 0018 0059 0019 001E 001A 001E 001A 0057 001A 001E 004F 0057 0034 003B 0181"
+
+  - platform: template
+    name: "Aspiration -1"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0008 0000 0021 0033 003C 0018 001F 0019 001E 0035 003B 001A 001E 006A 003B 0034 003B 0181"
+
+  # Boost
+  - platform: template
+    name: "Boost ON"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0008 0000 0021 0018 003C 0033 001F 001A 001E 001A 003B 0035 001E 004F 003B 004F 003B 0181"
+
+  - platform: template
+    name: "Boost OFF"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0008 0000 0021 0019 003C 0033 001F 001A 001E 001A 003B 0034 001E 004F 003B 004F 003B 0181"
+
+  # Arrêt différé
+  - platform: template
+    name: "Arrêt différé ON"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0006 0000 0020 0034 003B 0034 001E 004F 003C 004F 001D 0034 003B 0181"
+
+  - platform: template
+    name: "Arrêt différé OFF"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0006 0000 0021 0034 003B 0034 001F 004E 003B 004E 001E 0034 003C 0181"
+
+  # Mode 24H
+  - platform: template
+    name: "Mode 24H ON - appui long"
+    on_press:
+      - script.execute: mode_24h_on
+
+  - platform: template
+    name: "Mode 24H OFF - appui long"
+    on_press:
+      - script.execute: mode_24h_off'''
  
 ## **Images :**
 
