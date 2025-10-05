@@ -40,18 +40,18 @@ Testez l’apprentissage et l’envoi des codes IR.
 Images
 
 
+__________________________________________________________________________________
+
+Boîtiers 3D :
+
+• Base commune pour toutes les variantes
+• Top interchangeable : LED vers le haut ou sur le côté
+• Alimentation intégrée ou externe selon la version
+• Les fichiers STL sont fournis dans le dossier 3D/
 
 
-Boîtiers 3D
+__________________________________________________________________________________
 
-Base commune pour toutes les variantes
-
-Top interchangeable : LED vers le haut ou sur le côté
-
-Alimentation intégrée ou externe selon la version
-
-Les fichiers STL sont fournis dans le dossier 3D/
-
-Licence
+Licence :
 
 Ce projet est sous MIT License – vous êtes libre de l’utiliser, modifier et partager.
