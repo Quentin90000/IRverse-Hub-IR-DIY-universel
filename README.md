@@ -63,11 +63,11 @@ IRverse/
  │   ├─ prototype.jpg
  │   └─ pcb.png
  └─ README.md           # Ce fichier
+ 
 ## **Images :**
 
-## Images
 
-![Prototype IRverse](Boitier 3D IRverse - Alimentation embarquée.png)
+![Boitier 3D IRverse - Alimentation embarquée](Boitier%203D%20IRverse%20-%20Alimentation%20embarquee.png)
 ![PCB](pcb.png)
 
 
