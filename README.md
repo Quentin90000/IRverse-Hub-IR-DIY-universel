@@ -27,3 +27,31 @@ IRverse/
 │ ├─ prototype.jpg
 │ └─ pcb.png
 └─ README.md # Ce fichier
+Ouvrez le firmware dans Arduino IDE ou PlatformIO.
+
+Configurez votre réseau Wi-Fi et compilez.
+
+Téléversez le firmware sur l’ESP8266.
+
+Montez la LED IR dans le boîtier choisi (haut ou côté) et branchez l’alimentation.
+
+Testez l’apprentissage et l’envoi des codes IR.
+
+Images
+
+
+
+
+Boîtiers 3D
+
+Base commune pour toutes les variantes
+
+Top interchangeable : LED vers le haut ou sur le côté
+
+Alimentation intégrée ou externe selon la version
+
+Les fichiers STL sont fournis dans le dossier 3D/
+
+Licence
+
+Ce projet est sous MIT License – vous êtes libre de l’utiliser, modifier et partager.
