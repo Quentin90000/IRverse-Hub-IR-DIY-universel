@@ -225,8 +225,12 @@ button:
 
 - Alimentation intégrée ou externe selon la version
 
-- Les fichiers STL sont fournis dans le dossier 3D/
+- Les fichiers STL sont fournis dans le dossier
 
 ## **Licence :**
 
 Ce projet est sous MIT License – vous êtes libre de l’utiliser, modifier et partager.
+
+## **Lien externe :**
+
+Le projet peut être suivi directement sur le forum HACF en suivant ce lien : https://forum.hacf.fr/t/emetteur-recepteur-irverse/65450
