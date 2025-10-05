@@ -52,13 +52,11 @@ PCB sur mesure pour monter tous les composants proprement
 
 ## **Contenu du dépôt :**
 
-## **Contenu du dépôt :**
-
 Le dépôt contient tous les fichiers nécessaires pour le projet IRverse / IRfinity :
 
 ### **Boîtiers 3D**
-- `IRverse - Alimentation embarquée.stl` – Boîtier avec LED vers le haut et alimentation intégrée
-- `IRverse - Alimentation séparée.stl` – Boîtier avec LED sur le côté et alimentation séparée
+- `IRverse - Alimentation embarquée.stl` – Boîtier avec LED vers le haut ou latérale et alimentation intégrée
+- `IRverse - Alimentation séparée.stl` – Boîtier avec LED vers le haut ou latérale et alimentation séparée
 
 ### **Photos**
 - `Boitier 3D IRverse - Alimentation embarquée.PNG` – Prototype avec alimentation intégrée
@@ -67,7 +65,9 @@ Le dépôt contient tous les fichiers nécessaires pour le projet IRverse / IRfi
 - `PCB IRverse - Alimentation séparée.PNG` – PCB monté version alimentation séparée
 - `Shéma IRverse - Alimentation embarquée.PNG` – Schéma version alimentation intégrée
 - `Shéma IRverse - Alimentation séparée.PNG` – Schéma version alimentation séparée
-- `pcb kicad émetteur-recepteur ir.PNG` – Capture du PCB émetteur-récepteur IR
+- `PCB IRverse - Alimentation embarquée assemblé.JPG` PCB IRverse - Alimentation intégrée assemblé
+	
+
 
 ### **Fichiers PCB**
 - `PCB IRverse - Alimentation embarquée.zip` – Gerbers version alimentation intégrée
@@ -75,9 +75,6 @@ Le dépôt contient tous les fichiers nécessaires pour le projet IRverse / IRfi
 
 ### **Code**
 - `README.md` – Ce fichier
-- `main.ino` – Code principal ESP8266 (à copier ici si tu veux le partager)
-
-
 
 ## **Code fonctionnel :**
 
@@ -218,14 +215,6 @@ button:
     on_press:
       - script.execute: mode_24h_off
 ```
-
-## **Images :**
-
-
-![Boitier 3D IRverse - Alimentation embarquée](Boitier%203D%20IRverse%20-%20Alimentation%20embarquee.png)
-![PCB](pcb.png)
-
-
 
 
 ## **Boîtiers 3D :**
