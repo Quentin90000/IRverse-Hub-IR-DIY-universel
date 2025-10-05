@@ -64,7 +64,9 @@ IRverse/
  │   └─ pcb.png
  └─ README.md           # Ce fichier
 
-## **Code :**
+## **Code fonctionnel :**
+
+Ici un code basé sur une hotte aspirante Roblin Aqua 900 :
 
 ```
 esphome:
