@@ -66,7 +66,8 @@ IRverse/
 
 ## **Code :**
 
-'''esphome:
+```
+esphome:
   name: esp8266-roblin-ir
   friendly_name: ESP8266-Roblin_IR
 
@@ -198,8 +199,9 @@ button:
   - platform: template
     name: "Mode 24H OFF - appui long"
     on_press:
-      - script.execute: mode_24h_off'''
- 
+      - script.execute: mode_24h_off
+```
+
 ## **Images :**
 
 
