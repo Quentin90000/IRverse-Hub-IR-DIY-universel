@@ -51,18 +51,33 @@ Presse-étoupe : PG9 pour alimentation embarquée, PG7 pour alimentation sépar�
 PCB sur mesure pour monter tous les composants proprement
 
 ## **Contenu du dépôt :**
-IRverse/
- ├─ firmware/           # Code ESP8266 (Arduino ou PlatformIO)
- │   └─ main.ino
- ├─ PCB/                # Schémas PCB
- │   └─ esquisse.kicad_pcb
- ├─ 3D/                 # Boîtiers 3D
- │   ├─ boitier_top.stl
- │   └─ boitier_base.stl
- ├─ assets/             # Images et photos du projet
- │   ├─ prototype.jpg
- │   └─ pcb.png
- └─ README.md           # Ce fichier
+
+## **Contenu du dépôt :**
+
+Le dépôt contient tous les fichiers nécessaires pour le projet IRverse / IRfinity :
+
+### **Boîtiers 3D**
+- `IRverse - Alimentation embarquée.stl` – Boîtier avec LED vers le haut et alimentation intégrée
+- `IRverse - Alimentation séparée.stl` – Boîtier avec LED sur le côté et alimentation séparée
+
+### **Photos**
+- `Boitier 3D IRverse - Alimentation embarquée.PNG` – Prototype avec alimentation intégrée
+- `Boitier 3D IRverse - Alimentation séparée.PNG` – Prototype avec alimentation séparée
+- `PCB IRverse - Alimentation embarquée.PNG` – PCB monté version alimentation intégrée
+- `PCB IRverse - Alimentation séparée.PNG` – PCB monté version alimentation séparée
+- `Shéma IRverse - Alimentation embarquée.PNG` – Schéma version alimentation intégrée
+- `Shéma IRverse - Alimentation séparée.PNG` – Schéma version alimentation séparée
+- `pcb kicad émetteur-recepteur ir.PNG` – Capture du PCB émetteur-récepteur IR
+
+### **Fichiers PCB**
+- `PCB IRverse - Alimentation embarquée.zip` – Gerbers version alimentation intégrée
+- `PCB IRverse - Alimentation séparée.zip` – Gerbers version alimentation séparée
+
+### **Code**
+- `README.md` – Ce fichier
+- `main.ino` – Code principal ESP8266 (à copier ici si tu veux le partager)
+
+
 
 ## **Code fonctionnel :**
 
@@ -223,6 +238,6 @@ button:
 
 - Les fichiers STL sont fournis dans le dossier 3D/
 
-##**Licence :**
+## **Licence :**
 
 Ce projet est sous MIT License – vous êtes libre de l’utiliser, modifier et partager.
