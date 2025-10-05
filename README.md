@@ -1,7 +1,7 @@
 IRverse / IRfinity est un hub IR DIY basé sur ESP8266, capable de piloter tous vos appareils à télécommande infrarouge : TV, ampli, clim, hotte, sèche-serviettes, lumières IR, et plus.
 Il apprend et reproduit vos codes IR, avec boîtiers modulables (LED haut/côté) et alimentation 5 V ou 230 V. Universel, flexible et 100 % DIY.
 
-Fonctionnalités:
+<u>**Fonctionnalités:**</u>
 
 - Apprentissage et reproduction de codes IR
 
@@ -13,7 +13,7 @@ Fonctionnalités:
 
 - Compatible avec différents projets DIY et makers
 
-Matériel nécessaire:
+**Matériel nécessaire:**
 Microcontrôleur
 
 1 × D1 Mini Pro 16 Mb avec antenne externe – Gère l’émission IR et alimente tous les composants
