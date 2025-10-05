@@ -44,13 +44,13 @@ ________________________________________________________________________________
 
 Boîtiers 3D :
 
-• Base commune pour toutes les variantes
+- Base commune pour toutes les variantes
 
-• Top interchangeable : LED vers le haut ou sur le côté
+- Top interchangeable : LED vers le haut ou sur le côté
 
-• Alimentation intégrée ou externe selon la version
+- Alimentation intégrée ou externe selon la version
 
-• Les fichiers STL sont fournis dans le dossier 3D/
+- Les fichiers STL sont fournis dans le dossier 3D/
 
 
 __________________________________________________________________________________
