@@ -9,7 +9,7 @@ Il apprend et reproduit vos codes IR, avec boîtiers modulables (LED haut/côté
 
 - Pilotage de multiples appareils dans la même pièce
 
-- Alimentation modulable : 5 V USB ou 230 V embarquée
+- Alimentation modulable : 5VDC USB externe ou 230VAC embarquée
 
 - Boîtier modulable : LED pointant vers le haut ou sur le côté
 
@@ -66,8 +66,6 @@ Le dépôt contient tous les fichiers nécessaires pour le projet IRverse / IRfi
 - `Shéma IRverse - Alimentation embarquée.PNG` – Schéma version alimentation intégrée
 - `Shéma IRverse - Alimentation séparée.PNG` – Schéma version alimentation séparée
 - `PCB IRverse - Alimentation embarquée assemblé.JPG` PCB IRverse - Alimentation intégrée assemblé
-	
-
 
 ### **Fichiers PCB**
 - `PCB IRverse - Alimentation embarquée.zip` – Gerbers version alimentation intégrée
@@ -92,7 +90,7 @@ logger:
 
 api:
   encryption:
-    key: "takeyapi"
+    key: "tacléapi"
 
 ota:
   platform: esphome
@@ -111,6 +109,13 @@ remote_transmitter:
   id: my_remote
   pin: D5
   carrier_duty_percent: 50%
+
+# --- Récepteur IR pour sniffer ---
+remote_receiver:
+  pin:
+    number: D4
+    inverted: true
+  dump: all
 
 # --- Scripts pour appuis longs ---
 script:
@@ -214,8 +219,14 @@ button:
     name: "Mode 24H OFF - appui long"
     on_press:
       - script.execute: mode_24h_off
-```
 
+  # Réserve / Inconnu
+  - platform: template
+    name: "Réserve / Inconnu"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006D 0009 0000 0021 0018 001F 0033 001F 0018 001F 0034 001E 0034 001E 0034 001E 001A 001E 0034 001E 0181"
+```
 
 ## **Boîtiers 3D :**
 
